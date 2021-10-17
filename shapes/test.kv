@@ -1,0 +1,1297 @@
+#: import gch kivy.utils.get_color_from_hex
+##: import ILWWT IconLeftWidgetWithoutTouch
+Screen:
+    NavigationLayout:
+        MyWindow:
+            id: MyWindow
+            MainScreenWindow:
+                name: "MainScreen"
+                BoxLayout:
+                    orientation:"vertical"
+                    MDToolbar:
+                        title: "application"
+                        left_action_items: [["menu"]] ##["G:\code\Python 3.8.5 - 64bit\successful\A.N\LOGO\LOG122.png"]
+                        right_action_items: [["animation-outline"]]
+                    MDBottomNavigation:       
+                        text_color_active: gch("#732ded") or [1,1,1,1]#ghc("#6836ad") , gray = [120,120,120,1]
+                        MDBottomNavigationItem:
+                            #panel_color:[0.2980392156862745, 0.2823529411764706, 0.32941176470588235, 1]
+                            text: "2D"
+                            name: "2D screen"
+                            icon:"square-outline"
+                            ScrollView:
+                                do_scroll_x: False
+                                MDList:
+                                    MDLabel:
+                                        text: "  2D shapes:"
+                                        font_size: 15
+                                        font_style: "Subtitle2" #"H6"
+                                        theme_text_color: "Hint"
+                                        spacing: 30
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Triangle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Triangle"
+                                        secondary_text: "Base & Height"
+                                        tertiary_text: "Area"
+                                        IconLeftWidget:
+                                            icon: "shapes/triangle.png"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "EquilateralTriangle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Equilateral Triangle"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "triangle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "RightTriangle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Right Triangle"
+                                        secondary_text: "Sides with 90°"
+                                        tertiary_text: "Area, Perimeter & Hypotenuse"
+                                        IconLeftWidget:
+                                            icon: "angle-right"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "IsoscelesTriangle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Isosceles Triangle"
+                                        secondary_text: "Base & Side"
+                                        tertiary_text: "Area,Perimeter & Height"
+                                        #font_style:"Caption"
+                                        IconLeftWidget:
+                                            icon: "G:\code\Python 3.8.5 - 64bit\successful\A.N\The Kivy\shapes\triangle.png"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "ScaleneTriangle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Scalene Triangle"
+                                        secondary_text: "Sides"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "triangle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Quadrilateral"
+                                            root.manager.transition.direction = "left"
+                                        text: "Quadrilateral"
+                                        secondary_text: "Diagonals"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "triangle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Rectangle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Rectangle"
+                                        secondary_text: "Lenght & Breadth"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "rectangle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Square"
+                                            root.manager.transition.direction = "left"
+                                        text: "Square"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "square-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Rhombus"
+                                            root.manager.transition.direction = "left"
+                                        text: "Rhombus"
+                                        secondary_text: "Diagonals"
+                                        tertiary_text: "Area, Perimeter & Side"
+                                        IconLeftWidget:
+                                            icon: "rhombus-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Kite"
+                                            root.manager.transition.direction = "left"
+                                        text: "Kite"
+                                        secondary_text: "Diagonals & Sides"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "triangle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Parallelogram"
+                                            root.manager.transition.direction = "left"
+                                        text: "Parallelogram"
+                                        secondary_text: "Side, Base & Height"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "triangle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Trapezium"
+                                            root.manager.transition.direction = "left"
+                                        text: "Trapezium"
+                                        secondary_text: "All sides & Height"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "triangle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "RegularPentagon"
+                                            root.manager.transition.direction = "left"
+                                        text: "Regular Pentagon"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area, Perimeter & Diagonal"
+                                        IconLeftWidget:
+                                            icon: "pentagon-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "RegularHexagon"
+                                            root.manager.transition.direction = "left"
+                                        text: "Regular Hexagon"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "hexagon-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "RegularHeptagon"
+                                            root.manager.transition.direction = "left"
+                                        text: "Regular Heptagon"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "pentagon-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "RegularOctagon"
+                                            root.manager.transition.direction = "left"
+                                        text:"Regular Octagon"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "octagon-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "RegularNonagon"
+                                            root.manager.transition.direction = "left"
+                                        text: "Regular Nonagon"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "pentagon-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "RegularDecagon"
+                                            root.manager.transition.direction = "left"
+                                        text: "Regular Decagon"
+                                        secondary_text: "Side"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "pentagon-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Circle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Circle"
+                                        secondary_text: "Radius"
+                                        tertiary_text: "Area & Circumference"
+                                        IconLeftWidget:
+                                            icon: "circle-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "SemiCircle"
+                                            root.manager.transition.direction = "left"
+                                        text: "Semi-Circle"
+                                        secondary_text: "Radius"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            #icon: "circle-slice-4"
+                                            icon: "circle-half"
+                                            #icon: "circle-half-full"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Ellipse"
+                                            root.manager.transition.direction = "left"
+                                        text: "Ellipse"
+                                        secondary_text: "X-axis & Y-axis"
+                                        tertiary_text: "Area & Circumference"
+                                        IconLeftWidget:
+                                            icon: "ellipse-outline"
+                                    ThreeLineIconListItem:
+                                        on_release:
+                                            app.root.current = "Crescent"
+                                            root.manager.transition.direction = "left"
+                                        text: "Crescent"
+                                        secondary_text: "Radii & Largest distance between the two circles"
+                                        tertiary_text: "Area & Perimeter"
+                                        IconLeftWidget:
+                                            icon: "moon-waning-crescent"
+
+                        MDBottomNavigationItem:
+                            text: "3D"
+                            name: "3D screen"
+                            icon:"cube-outline"
+                            ScrollView:
+                                do_scroll_x: False
+                                MDList:
+                                    MDLabel:
+                                        text: "  3D shapes:"
+                                        font_size: 15
+                                        font_style: "Subtitle2" #"H6"
+                                        theme_text_color: "Hint"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Cube"
+                                            root.manager.transition.direction = "left"
+                                        text: "Cube"
+                                        secondary_text: "Edge"
+                                        tertiary_text: "Volume, T.S.A, L.S.A & Diagonal"
+                                        IconLeftWidget:
+                                            icon: "cube-outline"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Cuboid"
+                                            root.manager.transition.direction = "left"
+                                        text: "Cuboid"
+                                        secondary_text: "Lenght, Breadth, & Height"
+                                        tertiary_text: "Volume, T.S.A & Diagonal"
+                                        IconLeftWidget:
+                                            icon: "cube-outline"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "TriangularPrism"
+                                            root.manager.transition.direction = "left"
+                                        text: "Triangular Prism"
+                                        secondary_text: "Edges & Height"
+                                        tertiary_text: "Volume, T.S.A, L.S.A & Base-Area"
+                                        IconLeftWidget:
+                                            icon: "cube-outline"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "TriangularPyramid"
+                                            root.manager.transition.direction = "left"
+                                        text: "Triangular Pyramid"
+                                        secondary_text: "Base-Area, Base-Perimeter, Slant-Height & Height"
+                                        tertiary_text: "Volume, T.S.A, L.S.A"
+                                        IconLeftWidget:
+                                            icon: "cube-outline"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "SquarePyramid"
+                                            root.manager.transition.direction = "left"
+                                        text: "Square Pyramid"
+                                        secondary_text: "Edge & Height"
+                                        tertiary_text: "Volume, T.S.A, L.S.A, Base-Area & Face-Area"
+                                        IconLeftWidget:
+                                            icon: "cube-outline"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "RectanglePyramid"
+                                            root.manager.transition.direction = "left"
+                                        text: "Rectangle Pyramid"
+                                        secondary_text: "Edges & Height"
+                                        tertiary_text: "Volume, T.S.A, L.S.A & Base-Area"
+                                        IconLeftWidget:
+                                            icon: "cube-outline"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "PentagonalPyramid"
+                                            root.manager.transition.direction = "left"
+                                        text: "Pentagonal Pyramid"
+                                        secondary_text: "Edge & Height"
+                                        tertiary_text: "Volume, T.S.A, L.S.A, Base-Area & Face-Area"
+                                        IconLeftWidget:
+                                            icon: "shapes\pentagonalpyramid.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "HexagonalPyramid"
+                                            root.manager.transition.direction = "left"
+                                        text: "Hexagonal Pyramid"
+                                        secondary_text: "Edge & Height"
+                                        tertiary_text: "Volume, T.S.A, L.S.A, Base-Area & Face-Area"
+                                        IconLeftWidget:
+                                            icon: "shapes\hexagonalpyramid.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Tetrahedron"
+                                            root.manager.transition.direction = "left"
+                                        text: "Tetrahedron"
+                                        secondary_text: "Edge"
+                                        tertiary_text: "Volume, T.S.A, L.S.A, Face-Area & Height"
+                                        IconLeftWidget:
+                                            icon: "G:\code\Python 3.8.5 - 64bit\successful\A.N\The Kivy\shapes\tetrahedron.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Octahedron"
+                                            root.manager.transition.direction = "left"
+                                        text: "Octahedron"
+                                        secondary_text: "Edge"
+                                        tertiary_text: "Volume & T.S.A"
+                                        IconLeftWidget:
+                                            icon: "shapes\octahedron.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Dodecahedron"
+                                            root.manager.transition.direction = "left"
+                                        text: "Dodecahedron"
+                                        secondary_text: "Edge"
+                                        tertiary_text: "Volume & T.S.A"
+                                        IconLeftWidget:
+                                            icon: "shapes\dodecahedron.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Icosahedron"
+                                            root.manager.transition.direction = "left"
+                                        text: "Icosahedron"
+                                        secondary_text: "Edge"
+                                        tertiary_text: "Volume & T.S.A"
+                                        IconLeftWidget:
+                                            icon: "shapes\icosahedron.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Sphere"
+                                            root.manager.transition.direction = "left"
+                                        text: "Sphere"
+                                        secondary_text: "Radius"
+                                        tertiary_text: "Volume, T.S.A, Circumference & Diameter"
+                                        IconLeftWidget:
+                                            icon: "shapes\sphere.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "HemiSphere"
+                                            root.manager.transition.direction = "left"
+                                        text: "Hemi-Sphere"
+                                        secondary_text: "Radius"
+                                        tertiary_text: "Volume, T.S.A, C.S.A, Base-Area, Circumference & Diameter"
+                                        IconLeftWidget:
+                                            icon: "shapes\hemisphere.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Ellipsoid"
+                                            root.manager.transition.direction = "left"
+                                        text: "Ellipsoid"
+                                        secondary_text: "X-axis, Y-axis & Z-axis"
+                                        tertiary_text: "Volume & T.S.A"
+                                        IconLeftWidget:
+                                            icon: "shapes\ellipsoid2.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Cylinder"
+                                            root.manager.transition.direction = "left"
+                                        text: "Cylinder"
+                                        secondary_text: "Radius & Height"
+                                        tertiary_text: "Volume, T.S.A, C.S.A, Base-Area & Diameter"
+                                        IconLeftWidget:
+                                            icon: "shapes\cylinder.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Cone"
+                                            root.manager.transition.direction = "left"
+                                        text: "Cone"
+                                        secondary_text: "Radius & Height"
+                                        tertiary_text: "Volume, T.S.A, C.S.A, Base-Area, Slant-Height & Diameter"
+                                        IconLeftWidget:
+                                            icon: "shapes\cone.png"
+                                    ThreeLineIconListItem:
+                                        on_release: 
+                                            app.root.current = "Torus"
+                                            root.manager.transition.direction = "left"
+                                        text: "Torus"
+                                        secondary_text: "Radii"
+                                        tertiary_text: "Volume & T.S.A"
+                                        IconLeftWidget:
+                                            icon: "shapes\torus.png"
+            TriangleWindow:
+            EquilateralTriangleWindow:
+            RightTriangleWindow:
+            IsoscelesTriangleWindow:
+            ScaleneTriangleWindow:
+            QuadrilateralWindow:
+            RectangleWindow:
+            SquareWindow:
+            RhombusWindow:
+            KiteWindow:
+            ParallelogramWindow:
+            TrapeziumWindow:
+            RegularPentagonWindow:
+            RegularHexagonWindow:
+            RegularHeptagonWindow:
+            RegularOctagonWindow:
+            RegularNonagonWindow:
+            RegularDecagonWindow:
+            CircleWindow:
+            SemiCircleWindow:
+            EllipseWindow:
+            CrescentWindow:
+            CubeWindow:
+            CuboidWindow:
+            TriangularPrismWindow:
+            TriangularPyramidWindow:
+            SquarePyramidWindow:
+            RectanglePyramidWindow:
+            PentagonalPyramidWindow:
+            HexagonalPyramidWindow:
+            TetrahedronWindow:
+            OctahedronWindow:
+            DodecahedronWindow:
+            IcosahedronWindow:
+            SphereWindow:
+            HemiSphereWindow:
+            EllipsoidWindow:
+            CylinderWindow:
+            ConeWindow:
+            TorusWindow:
+'''
+        <MainScreenWindow>:
+            name: "MainScreen"
+            BoxLayout:
+                orientation:"vertical"
+                MDToolbar:
+                    title: "application"
+                    left_action_items: [["menu"]] ##["G:\code\Python 3.8.5 - 64bit\successful\A.N\LOGO\LOG122.png"]
+                    right_action_items: [["animation-outline"]]
+                MDBottomNavigation:       
+                    text_color_active: gch("#732ded") or [1,1,1,1]#ghc("#6836ad") , gray = [120,120,120,1]
+                    MDBottomNavigationItem:
+                        #panel_color:[0.2980392156862745, 0.2823529411764706, 0.32941176470588235, 1]
+                        text: "2D"
+                        name: "2D screen"
+                        icon:"square-outline"
+                        ScrollView:
+                            do_scroll_x: False
+                            MDList:
+                                MDLabel:
+                                    text: "  2D shapes:"
+                                    font_size: 15
+                                    font_style: "Subtitle2" #"H6"
+                                    theme_text_color: "Hint"
+                                    spacing: 30
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Triangle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Triangle"
+                                    secondary_text: "Base & Height"
+                                    tertiary_text: "Area"
+                                    IconLeftWidget:
+                                        icon: "shapes/triangle.png"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "EquilateralTriangle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Equilateral Triangle"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "triangle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "RightTriangle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Right Triangle"
+                                    secondary_text: "Sides with 90°"
+                                    tertiary_text: "Area, Perimeter & Hypotenuse"
+                                    IconLeftWidget:
+                                        icon: "angle-right"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "IsoscelesTriangle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Isosceles Triangle"
+                                    secondary_text: "Base & Side"
+                                    tertiary_text: "Area,Perimeter & Height"
+                                    #font_style:"Caption"
+                                    IconLeftWidget:
+                                        icon: "G:\code\Python 3.8.5 - 64bit\successful\A.N\The Kivy\shapes\triangle.png"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "ScaleneTriangle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Scalene Triangle"
+                                    secondary_text: "Sides"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "triangle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Quadrilateral"
+                                        root.manager.transition.direction = "left"
+                                    text: "Quadrilateral"
+                                    secondary_text: "Diagonals"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "triangle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Rectangle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Rectangle"
+                                    secondary_text: "Lenght & Breadth"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "rectangle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Square"
+                                        root.manager.transition.direction = "left"
+                                    text: "Square"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "square-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Rhombus"
+                                        root.manager.transition.direction = "left"
+                                    text: "Rhombus"
+                                    secondary_text: "Diagonals"
+                                    tertiary_text: "Area, Perimeter & Side"
+                                    IconLeftWidget:
+                                        icon: "rhombus-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Kite"
+                                        root.manager.transition.direction = "left"
+                                    text: "Kite"
+                                    secondary_text: "Diagonals & Sides"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "triangle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Parallelogram"
+                                        root.manager.transition.direction = "left"
+                                    text: "Parallelogram"
+                                    secondary_text: "Side, Base & Height"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "triangle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Trapezium"
+                                        root.manager.transition.direction = "left"
+                                    text: "Trapezium"
+                                    secondary_text: "All sides & Height"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "triangle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "RegularPentagon"
+                                        root.manager.transition.direction = "left"
+                                    text: "Regular Pentagon"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area, Perimeter & Diagonal"
+                                    IconLeftWidget:
+                                        icon: "pentagon-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "RegularHexagon"
+                                        root.manager.transition.direction = "left"
+                                    text: "Regular Hexagon"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "hexagon-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "RegularHeptagon"
+                                        root.manager.transition.direction = "left"
+                                    text: "Regular Heptagon"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "pentagon-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "RegularOctagon"
+                                        root.manager.transition.direction = "left"
+                                    text:"Regular Octagon"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "octagon-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "RegularNonagon"
+                                        root.manager.transition.direction = "left"
+                                    text: "Regular Nonagon"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "pentagon-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "RegularDecagon"
+                                        root.manager.transition.direction = "left"
+                                    text: "Regular Decagon"
+                                    secondary_text: "Side"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "pentagon-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Circle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Circle"
+                                    secondary_text: "Radius"
+                                    tertiary_text: "Area & Circumference"
+                                    IconLeftWidget:
+                                        icon: "circle-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "SemiCircle"
+                                        root.manager.transition.direction = "left"
+                                    text: "Semi-Circle"
+                                    secondary_text: "Radius"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        #icon: "circle-slice-4"
+                                        icon: "circle-half"
+                                        #icon: "circle-half-full"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Ellipse"
+                                        root.manager.transition.direction = "left"
+                                    text: "Ellipse"
+                                    secondary_text: "X-axis & Y-axis"
+                                    tertiary_text: "Area & Circumference"
+                                    IconLeftWidget:
+                                        icon: "ellipse-outline"
+                                ThreeLineIconListItem:
+                                    on_release:
+                                        app.root.current = "Crescent"
+                                        root.manager.transition.direction = "left"
+                                    text: "Crescent"
+                                    secondary_text: "Radii & Largest distance between the two circles"
+                                    tertiary_text: "Area & Perimeter"
+                                    IconLeftWidget:
+                                        icon: "moon-waning-crescent"
+
+                    MDBottomNavigationItem:
+                        text: "3D"
+                        name: "3D screen"
+                        icon:"cube-outline"
+                        ScrollView:
+                            do_scroll_x: False
+                            MDList:
+                                MDLabel:
+                                    text: "  3D shapes:"
+                                    font_size: 15
+                                    font_style: "Subtitle2" #"H6"
+                                    theme_text_color: "Hint"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Cube"
+                                        root.manager.transition.direction = "left"
+                                    text: "Cube"
+                                    secondary_text: "Edge"
+                                    tertiary_text: "Volume, T.S.A, L.S.A & Diagonal"
+                                    IconLeftWidget:
+                                        icon: "cube-outline"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Cuboid"
+                                        root.manager.transition.direction = "left"
+                                    text: "Cuboid"
+                                    secondary_text: "Lenght, Breadth, & Height"
+                                    tertiary_text: "Volume, T.S.A & Diagonal"
+                                    IconLeftWidget:
+                                        icon: "cube-outline"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "TriangularPrism"
+                                        root.manager.transition.direction = "left"
+                                    text: "Triangular Prism"
+                                    secondary_text: "Edges & Height"
+                                    tertiary_text: "Volume, T.S.A, L.S.A & Base-Area"
+                                    IconLeftWidget:
+                                        icon: "cube-outline"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "TriangularPyramid"
+                                        root.manager.transition.direction = "left"
+                                    text: "Triangular Pyramid"
+                                    secondary_text: "Base-Area, Base-Perimeter, Slant-Height & Height"
+                                    tertiary_text: "Volume, T.S.A, L.S.A"
+                                    IconLeftWidget:
+                                        icon: "cube-outline"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "SquarePyramid"
+                                        root.manager.transition.direction = "left"
+                                    text: "Square Pyramid"
+                                    secondary_text: "Edge & Height"
+                                    tertiary_text: "Volume, T.S.A, L.S.A, Base-Area & Face-Area"
+                                    IconLeftWidget:
+                                        icon: "cube-outline"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "RectanglePyramid"
+                                        root.manager.transition.direction = "left"
+                                    text: "Rectangle Pyramid"
+                                    secondary_text: "Edges & Height"
+                                    tertiary_text: "Volume, T.S.A, L.S.A & Base-Area"
+                                    IconLeftWidget:
+                                        icon: "cube-outline"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "PentagonalPyramid"
+                                        root.manager.transition.direction = "left"
+                                    text: "Pentagonal Pyramid"
+                                    secondary_text: "Edge & Height"
+                                    tertiary_text: "Volume, T.S.A, L.S.A, Base-Area & Face-Area"
+                                    IconLeftWidget:
+                                        icon: "shapes\pentagonalpyramid.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "HexagonalPyramid"
+                                        root.manager.transition.direction = "left"
+                                    text: "Hexagonal Pyramid"
+                                    secondary_text: "Edge & Height"
+                                    tertiary_text: "Volume, T.S.A, L.S.A, Base-Area & Face-Area"
+                                    IconLeftWidget:
+                                        icon: "shapes\hexagonalpyramid.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Tetrahedron"
+                                        root.manager.transition.direction = "left"
+                                    text: "Tetrahedron"
+                                    secondary_text: "Edge"
+                                    tertiary_text: "Volume, T.S.A, L.S.A, Face-Area & Height"
+                                    IconLeftWidget:
+                                        icon: "G:\code\Python 3.8.5 - 64bit\successful\A.N\The Kivy\shapes\tetrahedron.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Octahedron"
+                                        root.manager.transition.direction = "left"
+                                    text: "Octahedron"
+                                    secondary_text: "Edge"
+                                    tertiary_text: "Volume & T.S.A"
+                                    IconLeftWidget:
+                                        icon: "shapes\octahedron.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Dodecahedron"
+                                        root.manager.transition.direction = "left"
+                                    text: "Dodecahedron"
+                                    secondary_text: "Edge"
+                                    tertiary_text: "Volume & T.S.A"
+                                    IconLeftWidget:
+                                        icon: "shapes\dodecahedron.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Icosahedron"
+                                        root.manager.transition.direction = "left"
+                                    text: "Icosahedron"
+                                    secondary_text: "Edge"
+                                    tertiary_text: "Volume & T.S.A"
+                                    IconLeftWidget:
+                                        icon: "shapes\icosahedron.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Sphere"
+                                        root.manager.transition.direction = "left"
+                                    text: "Sphere"
+                                    secondary_text: "Radius"
+                                    tertiary_text: "Volume, T.S.A, Circumference & Diameter"
+                                    IconLeftWidget:
+                                        icon: "shapes\sphere.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "HemiSphere"
+                                        root.manager.transition.direction = "left"
+                                    text: "Hemi-Sphere"
+                                    secondary_text: "Radius"
+                                    tertiary_text: "Volume, T.S.A, C.S.A, Base-Area, Circumference & Diameter"
+                                    IconLeftWidget:
+                                        icon: "shapes\hemisphere.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Ellipsoid"
+                                        root.manager.transition.direction = "left"
+                                    text: "Ellipsoid"
+                                    secondary_text: "X-axis, Y-axis & Z-axis"
+                                    tertiary_text: "Volume & T.S.A"
+                                    IconLeftWidget:
+                                        icon: "shapes\ellipsoid2.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Cylinder"
+                                        root.manager.transition.direction = "left"
+                                    text: "Cylinder"
+                                    secondary_text: "Radius & Height"
+                                    tertiary_text: "Volume, T.S.A, C.S.A, Base-Area & Diameter"
+                                    IconLeftWidget:
+                                        icon: "shapes\cylinder.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Cone"
+                                        root.manager.transition.direction = "left"
+                                    text: "Cone"
+                                    secondary_text: "Radius & Height"
+                                    tertiary_text: "Volume, T.S.A, C.S.A, Base-Area, Slant-Height & Diameter"
+                                    IconLeftWidget:
+                                        icon: "shapes\cone.png"
+                                ThreeLineIconListItem:
+                                    on_release: 
+                                        app.root.current = "Torus"
+                                        root.manager.transition.direction = "left"
+                                    text: "Torus"
+                                    secondary_text: "Radii"
+                                    tertiary_text: "Volume & T.S.A"
+                                    IconLeftWidget:
+                                        icon: "shapes\torus.png"
+
+
+
+        <TriangleWindow>:
+            name:"Triangle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Triangle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+                
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <EquilateralTriangleWindow>:
+            name: "EquilateralTriangle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Equilateral Triangle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+                
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RightTriangleWindow>:
+            name: "RightTriangle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Right Triangle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+                
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <IsoscelesTriangleWindow>:
+            name: "IsoscelesTriangle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Isosceles Triangle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+                
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <ScaleneTriangleWindow>:
+            name: "ScaleneTriangle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Scalene Triangle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+                
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <QuadrilateralWindow>:
+            name: "Quadrilateral"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Quadrilateral"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RectangleWindow>:
+            name: "Rectangle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Rectangle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <SquareWindow>:
+            name: "Square"
+            
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Square"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RhombusWindow>:
+            name: "Rhombus"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Rhombus"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <KiteWindow>:
+            name: "Kite"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Kite"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <ParallelogramWindow>:
+            name: "Parallelogram"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Parallelogram"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <TrapeziumWindow>:
+            name: "Trapezium"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Trapezium"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RegularPentagonWindow>:
+            name: "RegularPentagon"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "RegularPentagon"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RegularHexagonWindow>:
+            name: "RegularHexagon"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "RegularHexagon"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RegularHeptagonWindow>:
+            name: "RegularHeptagon"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "RegularHeptagon"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RegularOctagonWindow>:
+            name: "c"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "RegularHeptagon"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RegularNonagonWindow>:
+            name: "RegularNonagon"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "RegularNonagon"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RegularDecagonWindow>:
+            name: "RegularDecagon"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "RegularDecagon"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <CircleWindow>:
+            name: "Circle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Circle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <SemiCircleWindow>:
+            name: "SemiCircle"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "SemiCircle"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <EllipseWindow>:
+            name: "Ellipse"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Ellipse"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <CrescentWindow>:
+            name: "Crescent"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Crescent"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <CubeWindow>:
+            name: "Cube"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Cube"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <CuboidWindow>:
+            name: "Cuboid"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Cuboid"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <TriangularPrismWindow>:
+            name: "TriangularPrism"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "TriangularPrism"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <TriangularPyramidWindow>:
+            name: "TriangularPyramid"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "TriangularPyramid"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <SquarePyramidWindow>:
+            name: "SquarePyramid"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "SquarePyramid"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <RectanglePyramidWindow>:
+            name: "RectangularPyramid"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "RectangularPyramid"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <PentagonalPyramidWindow>:
+            name: "PentagonalPyramid"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "PentagonalPyramid"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <HexagonalPyramidWindow>:
+            name: "HexagonalPyramid"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "HexagonalPyramid"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <TetrahedronWindow>:
+            name: "Tetrahedron"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Tetrahedron"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <OctahedronWindow>:
+            name: "Octahedron"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Octahedron"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <DodecahedronWindow>:
+            name: "Dodecahedron"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Dodecahedron"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <IcosahedronWindow>:
+            name: "Icosahedron"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Icosahedron"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <SphereWindow>:
+            name: "Sphere"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Sphere"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <HemiSphereWindow>:
+            name: "HemiSphere"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "HemiSphere"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <EllipsoidWindow>:
+            name: "Ellipsoid"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Ellipsoid"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <CylinderWindow>:
+            name: "Cylinder"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Cylinder"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <ConeWindow>:
+            name: "Cone"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Cone"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        <TorusWindow>:
+            name: "Torus"
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDToolbar:
+                    title: "Torus"
+                    left_action_items: [['arrow-left', lambda x: root.manager.change_screen_for_shapes("MainScreen")]]
+
+                MDLabel:
+                    text: "This is TRIANGLE window"
+                    halign: "center"
+        '''
